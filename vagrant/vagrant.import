@@ -1,0 +1,9 @@
+
+require 'open-uri'
+
+template = 'vagrantfile.template'
+unless File.exists?(template)
+  download = open('https://raw.githubusercontent.com/watysay/vagrant-sandbox/main/Vagrantfile')
+  IO.copy_stream(download, template)
+end
+load template if File.exists?(template)
