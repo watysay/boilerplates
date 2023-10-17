@@ -1,0 +1,7 @@
+FROM python:3.11.6-bookworm
+
+RUN pip install ansible==8.0 docker molecule[docker] yamllint ansible-lint
+WORKDIR /ansible
+
+# build with : docker build . -f <thisfile> -t docker-ansible -t docker-ansible:1.0
+# run with : docker run -it --rm -v $PWD:/ansible docker-ansible bash
