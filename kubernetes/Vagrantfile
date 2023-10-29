@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+
+  config.vbguest.auto_update = false
+  config.vbguest.no_install = true
+  config.vm.synced_folder ".", "/vagrant"
+
+  config.vm.define "ubuntu" do |sb|
+    sb.vm.box = "ubuntu/jammy64"
+    
+    sb.vm.provider "virtualbox" do |v|
+      v.cpus = 2
+      v.memory = 2048
+    end
+    sb.vm.network "forwarded_port", guest: 8001,  host: 8001
+    
+    sb.vm.provision "shell" do |s|
+      s.inline = "apt-get update && apt-get upgrade -yq"
+    end
+  end
+end
