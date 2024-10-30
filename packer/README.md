@@ -46,3 +46,32 @@ Cela permet d'obtenir une image en local nommée et taggé.
 ![Alt text](docker/post-proc-tag.png)
 
 
+## Utilisation avec Proxmox
+
+Documentation du plugin proxmox (https://developer.hashicorp.com/packer/integrations/hashicorp/proxmox).
+On peut utiliser comme builder [proxmox-iso](https://developer.hashicorp.com/packer/integrations/hashicorp/proxmox/latest/components/builder/iso) ou [proxmox-clone](https://developer.hashicorp.com/packer/integrations/hashicorp/proxmox/latest/components/builder/clone)
+
+La différence entre ces deux builders est la source de l'image. Dans le cas de _clone_ on va cloner une machine déjà existante sur l'instance Proxmox. Dans le cas de _iso_ on va récupérer un fichier ISO afin de créer une VM.
+
+On va donc partir sur proxmox-iso afin de créer une VM sans toucher à proxmox.
+
+### Connexion à Proxmox
+
+Je créé un fichier ```.pm_config```. Celui-ci contient les lignes suivantes :
+
+```shell
+export PM_API_URL="https://<PVE IP>:8006/api2/json"
+export PM_API_TOKEN_ID="<token>"
+export PM_API_TOKEN_SECRET="abcd1234"
+
+```
+Ces informations sont à récupérer/créer sur l'instance PVE. 
+> NB : Ce sont les mêmes variables qui sont utilisées par Terraform
+
+Ce fichier est à sourcer à chaque fois qu'on travaille sur le projet.
+
+> TODO: faire un script d'activation spécial proxmox (à la manière de virtualenv ?)
+
+
+### Builder
+
