@@ -103,6 +103,22 @@ sudo resolvectl dns eth0 192.168.1.200 192.168.1.1
 sudo systemctl restart systemd-resolved.service
 ```
 (on entre les ns par ordre de réponse voulue)
-
+=> est-ce que c'est pérenne ou ça revient au default après un reboot ?
 
 On peut mettre plusieurs fois la même IP avec des noms différents (sur des lignes différentes). Ca évite de passer par des cname dont la gestion est pas terrible avec dnsmasq
+
+Sur les clients du DNS :
+Pour Debian se référer à https://wiki.debian.org/resolv.conf
+Une méthode qui résiste au reboot :
+  - via sudo, unlink /etc/resolv.conf
+  - utiliser l'éditeur pour entrer les lignes
+    ```sh
+    nameserver <adresse IP du srv DNS>
+    search local
+    ```
+  - sauvegarder
+
+Tester via /etc/systemd/resolved.conf si ça fonctionne :
+- sudo rm /etc/resolv.conf
+- changer #DNS= de /etc/systemd/resolved.conf par DNS=<ip dns>
+- sudo reboot
