@@ -60,13 +60,12 @@ On va donc partir sur proxmox-iso afin de créer une VM sans toucher à proxmox.
 Je créé un fichier ```.pm_config```. Celui-ci contient les lignes suivantes :
 
 ```shell
-export PM_API_URL="https://<PVE IP>:8006/api2/json"
-export PM_API_TOKEN_ID="<token>"
-export PM_API_TOKEN_SECRET="abcd1234"
-
+export PROXMOX_URL="https://<PVE IP>:8006/api2/json"
+export PROXMOX_USERNAME="<token>"
+export PROXMOX_TOKEN="abcd1234"
 ```
 Ces informations sont à récupérer/créer sur l'instance PVE. 
-> NB : Ce sont les mêmes variables qui sont utilisées par Terraform
+> NB : Ce ne sont pas les mêmes variables qui sont utilisées par Terraform !
 
 Ce fichier est à sourcer à chaque fois qu'on travaille sur le projet.
 
