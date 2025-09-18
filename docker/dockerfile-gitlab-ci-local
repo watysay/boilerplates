@@ -1,0 +1,39 @@
+# running from node for gitlab-ci-install
+# might change as user management is worse
+FROM node:24-bookworm
+
+ENV rundir=/home/node/gitlab-ci
+ENV user=node
+
+# update and add necessary package for https calls
+RUN apt-get update && apt-get install -yq apt-transport-https rsync
+
+# unsafe-ing  run directory
+RUN git config --global --add safe.directory ${rundir}
+
+# setting work directory
+WORKDIR ${rundir}
+
+# install gitlab-ci-local
+RUN npm install -g gitlab-ci-local
+
+#install docker
+RUN curl -fsSL https://get.docker.com | sh
+
+# transfer all to user : dir ownership
+# and access to docker.sock
+RUN chown -R ${user}:${user} ${rundir} \
+    && usermod -a -G systemd-network ${user}
+
+# working with user
+USER ${user}
+
+# node image set entrypoint to npm
+# so changing it
+ENTRYPOINT ["/bin/bash", "-c"]
+# We set cmd to the bin to run when using this container
+# if need debug etc ... set cmd to bash on docker run
+CMD ["gitlab-ci-local"]
+
+# build with : docker build . -f dockerfile-gitlab-ci-local -t docker-gitlab-ci-local -t docker-gitlab-ci-local:1.1
+# run with : $ docker run -it --rm -v $PWD:/home/node/gitlab-ci -v"/var/run/docker.sock:/var/run/docker.sock" docker-gitlab-ci-local:1.1
