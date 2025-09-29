@@ -1,0 +1,25 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-prometheus-grafana
+  namespace: default
+spec:
+    entryPoints:
+      - web
+    routes:
+     - match: Host(`services.watylocal`) && PathPrefix(`/prometheus`)
+       kind: Rule
+       services:
+       - kind: Service
+         name: prom-release-prometheus-server
+         namespace: default
+         port: 80
+     - match: Host(`services.watylocal`) && PathPrefix(`/grafana`)
+       kind: Rule
+       services:
+       - kind: Service
+         name: graf-release-grafana
+         namespace: default
+         port: 80
+

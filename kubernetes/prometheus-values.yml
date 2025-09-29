@@ -1,0 +1,3 @@
+server:
+  prefixURL: "/prometheus"
+  baseURL: "http://services.watylocal/prometheus"
