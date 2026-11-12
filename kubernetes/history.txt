@@ -1,0 +1,1000 @@
+ 1148  docker run --help
+ 1149  docker ps
+ 1150  docker ps --help
+ 1151  docker ps --filter name=docker-ansible
+ 1152  docker ps --filter "name=docker-ansible"
+ 1153  docker ps --filter "name=toto"
+ 1154  docker ps --filter "name=toto" --format {{.Id}}
+ 1155  docker ps --filter "name=toto" --format={{.Id}}
+ 1156  docker ps --filter "name=toto" --format={{json .}}
+ 1157  docker ps --filter "name=toto" --format="{{json .}}"
+ 1158  docker ps --filter "name=toto" --format='{{json .}}'
+ 1159  docker ps --filter "name=docker-ansible --format='{{json .}}'
+ 1160  docker ps --filter "name=docker-ansible" --format='{{json .}}'
+ 1161  docker ps --filter "name=docker-ansible" --format='{{json .ID}}'
+ 1162  docker ps --filter "name=docker-ansible" --format='{{ .ID}}'
+ 1163  docker ps --filter "name=docker-ansible" --format='{{.ID}}'
+ 1164  echo $?
+ 1165  docker ps --filter "name=toto" --format='{{.ID}}'
+ 1166  echo $?
+ 1167  docker attach 87d409b3e100
+ 1168  docker ps
+ 1169  docker ps --filter "name=docker-ansible" --format='{{.ID}}'
+ 1170  docker exec c579c6a35977
+ 1171  docker exec c579c6a35977 bash
+ 1172  docker exec c579c6a35977 bash -c
+ 1173  docker exec c579c6a35977 ansible --version
+ 1174  docker exec erterte ansible --version
+ 1175  echo $?
+ 1176  docker ps --filter "name=docker-ansible" --format='{{.ID}}'
+ 1177  nmap
+ 1178  nmap -v -sn 10.0.0.0/8
+ 1179  nmap -v -sn 10.0.0.0/24
+ 1180  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1181  ssh myadmin@debian.watylocal
+ 1182  ssh myadmin@adb-Linux-Mint.watylocal
+ 1183  ssh myadmin@node-3.watylocal
+ 1184  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1185  sudo shutdown -h now
+ 1186  func ansible-playbook(){   docker run \
+ 1187  func ansible-playbook(){ docker run -it --rm -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible ansible-playbook }
+ 1188  func ansible-playbook() { docker run -it --rm -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible ansible-playbook }
+ 1189  func ansible-playbook(){ docker run -it --rm -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible ansible-playbook }
+ 1190  func ansible-playbook { docker run -it --rm -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible ansible-playbook }
+ 1191  ansible-playbook { docker run -it --rm -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible ansible-playbook }
+ 1192  ansible-playbook { docker run -it --rm -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible ansible-playbook; }
+ 1193  ansible-playbook { docker run -it --rm -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible ansible-playbook ; }
+ 1194  ansible-playbook () { docker run -it --rm -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible ansible-playbook ; }
+ 1195  ansible-playbook 
+ 1196  unset ansible-playbook 
+ 1197  alias myansible='docker run -it --rm -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible '
+ 1198  myansible 
+ 1199  myansible ansible-playbook
+ 1200  ansible-galaxy () { myansible ansible-galaxy ; }
+ 1201  ansible-galaxy 
+ 1202  myansible bash
+ 1203  docker run -it --rm --name docker-ansible -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible 
+ 1204  docker run -it --rm --name docker-ansible -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible bash
+ 1205  ls
+ 1206  alias myansible='docker run -it --rm --name docker-ansible -v $PWD:/ansible -v "/var/run/docker.sock:/var/run/docker.sock" docker-ansible'
+ 1207  ansible-config () {    myansible ansible-config ; }
+ 1208  ansible-console () {   myansible ansible-console ; }
+ 1209  ansible-galaxy () {    myansible ansible-galaxy ; }
+ 1210  ansible-inventory () { myansible ansible-inventory ; }
+ 1211  ansible-lint () {      myansible ansible-lint ; }
+ 1212  ansible-playbook () {  myansible ansible-playbook ; }
+ 1213  ansible-pull () {      myansible ansible-pull ; }
+ 1214  ansible-test () {      myansible ansible-test ; }
+ 1215  ansible-vault () {     myansible ansible-vault ; }
+ 1216  myansible 
+ 1217  myansible bash
+ 1218  cd docker/
+ 1219  ls
+ 1220  cat dockerfile-ansible 
+ 1221  man tailscale
+ 1222  tailscale -h
+ 1223  tailscale configure
+ 1224  histo tailscale
+ 1225  history | grep tailscale
+ 1226  exit
+ 1227  sudo tailscale set --ssh=true
+ 1228  nohup { sudo -v ; sleep 5 ; tailscale set --ssh=true}
+ 1229  nohup $( sudo -v ; sleep 5 ; tailscale set --ssh=true )
+ 1230  exit
+ 1231  sudo tailscale set --ssh=true
+ 1232  sudo tailscale set --ssh=true --accept-risk=lose-ssh
+ 1233  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1234  ssh myadmin@node-00
+ 1235  ssh myadmin@node-00.watylocal
+ 1236  ssh myadmin@node-01
+ 1237  ssh myadmin@node-01.watylocal
+ 1238  ssh myadmin@node-01
+ 1239  ssh myadmin@node-02
+ 1240  ssh myadmin@node-02.watylocal
+ 1241  ls
+ 1242  ;s 
+ 1243  mkdir ansible
+ 1244  ls
+ 1245  cd ansible/
+ 1246  nmap
+ 1247  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1248  cd ..
+ 1249  vim ansible-aliases
+ 1250  . ansible-aliases 
+ 1251  cd ansible/
+ 1252  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1253  myansible ansible -i10.0.0.33, -m ping
+ 1254  myansible ansible -i10.0.0.33, all -m ping
+ 1255  myansible ansible -h
+ 1256  myansible ansible --version
+ 1257  myansible -h
+ 1258  myansible --version
+ 1259  myansible ansible --version
+ 1260  myansible "ansible --version"
+ 1261  myansible "ansible -i10.0.0.33, all -m ping"
+ 1262  myansible "ansible -i10.0.0.33, all -u myadmin -m ping"
+ 1263  ssh myadmin@10.0.0.33
+ 1264  myansible "ansible -vvvv -i10.0.0.33, all -u myadmin -m ping"
+ 1265  myansible "ansible -vvvv -i10.0.0.33, all -u myadmin --key-file ~/.ssh/id_rsa -m ping"
+ 1266  myansible "ansible - -i-i10.0.0.33, all -u myadmin --key-file ~/.ssh/id_rsa -m ping"
+ 1267  cd ..
+ 1268  myansible "ansible - -i-i10.0.0.33, all -u myadmin --key-file ~/.ssh/id_rsa -m ping"
+ 1269  myansible "ansible - -i-i10.0.0.33, all -u myadmin --key-file ./.ssh/id_rsa -m ping"
+ 1270  cd ansible/
+ 1271  cp -p ~/.ssh/id_rsa ./
+ 1272  myansible "ansible - -i-i10.0.0.33, all -u myadmin --key-file .ssh/id_rsa -m ping"
+ 1273  myansible "ansible - -i-i10.0.0.33, all -u myadmin --key-file id_rsa -m ping"
+ 1274  ls
+ 1275  myansible ls
+ 1276  myansible "ansible - -i-i10.0.0.33, all -u myadmin --key-file id_rsa -m ping"
+ 1277  ssh myadmin@10.0.0.33
+ 1278  cat ~/.ssh/id_rsa.pub 
+ 1279  myansible "ansible -i10.0.0.33, all -u myadmin --key-file id_rsa -m ping"
+ 1280  ssh myadmin@10.0.0.33
+ 1281  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1282  myansible "ansible -i10.0.0.29, all -u myadmin --key-file id_rsa -m ping"
+ 1283  myansible "ansible -i10.0.0.29, all -u myadmin -m ping"
+ 1284  myansible "ansible -i10.0.0.29, all -u myadmin -m ping -k"
+ 1285  man ssh-add
+ 1286  man ssh-copy-id 
+ 1287  ssh-copy-id -i /home/admin/.ssh/id_rsa.pub myadmin@10.0.0.29
+ 1288  myansible "ansible -i10.0.0.29, all --u myadmin -m ping"
+ 1289  myansible "ansible -i10.0.0.29, all -u myadmin --key-file id_rsa -m ping"
+ 1290  myansible "ansible -i10.0.0.29,10.0.0.33 all -u myadmin --key-file id_rsa -m ping"
+ 1291  ssh myadmin@10.0.0.29
+ 1292  myansible "ansible -i10.0.0.29,10.0.0.33 all -u myadmin --key-file id_rsa -m ping"
+ 1293  myansible "ansible -i10.0.0.29,10.0 -u myadmin --key-file id_rsa -m ping"
+ 1294  myansible "ansible -i10.0.0.29, -u myadmin --key-file id_rsa -m ping"
+ 1295  myansible "ansible -i10.0.0.29, all -u myadmin --key-file id_rsa -m ping"
+ 1296  ssh myadmin@10.0.0.29
+ 1297  myansible "ansible -i10.0.0.29, all -u myadmin --key-file id_rsa -m ping"
+ 1298  cd ..
+ 1299  myansible "ansible -i10.0.0.29, all -u myadmin --key-file .ssh/id_rsa -m ping"
+ 1300  myansible "pwd ; ls"
+ 1301  myansible "pwd ; ls -la"
+ 1302  myansible "ansible -i10.0.0.29, all -u myadmin --key-file /ansible/.ssh/id_rsa -m ping"
+ 1303  myansible "pwd ; ls -la /ansible/.ssh/"
+ 1304  myansible "pwd ; ls -la /ansible/.ssh/ ; echo $USER"
+ 1305  myansible "pwd ; ls -la /ansible/.ssh/ ; ls $HOME/.ssh/"
+ 1306  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1307  ssh myadmin@10.0.0.32
+ 1308  ssh-copy-id -i /home/admin/.ssh/id_rsa.pub myadmin@10.0.0.32
+ 1309  ssh myadmin@10.0.0.32
+ 1310  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1311  cd simple-netboot/
+ 1312  ll
+ 1313  make
+ 1314  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1315  ssh myadmin@10.0.0.36
+ 1316  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1317  ssh myadmin@10.0.0.37
+ 1318  ssh myadmin@10.0.0.33
+ 1319  ssh myadmin@node-03
+ 1320  ssh myadmin@node-03.watylocal
+ 1321  ssh root@10.0.0.1
+ 1322  ping 10.0.0.1
+ 1323  ssh root@10.0.0.1
+ 1324  nmap -v -sn 10.0.0.0/24 | grep -v 'host down'
+ 1325  cat /etc/hosts
+ 1326  ping mngmt
+ 1327  curl https://node-00.watylocal
+ 1328  curl https://node-00.watylocal:6443
+ 1329  sudo shutdown -h now
+ 1330  exit
+ 1331  sudo tailscale up --force-reauth
+ 1332  sudo tailscale up --force-reauth --advertise-routes=10.0.0.0/24 --ssh
+ 1333  sudo tailscale up --force-reauth --advertise-routes=10.0.0.0/24 --ssh --accept-risk=lose-ssh
+ 1334  sudo tailscale status
+ 1335  sudo tailscale status
+ 1336  ping 8.8.8.8
+ 1337  sudo tailscale status
+ 1338  sudo tailscale up --force-reauth --advertise-routes=10.0.0.0/24 --ssh --accept-risk=lose-ssh
+ 1339  ping 10.0.0.1
+ 1340  ip a
+ 1341  docker run -d nginx/nginx
+ 1342  sudo docker run -d nginx/nginx
+ 1343  sudo docker run -d nginx
+ 1344  docker ps
+ 1345  docker attach f8e072636aff 
+ 1346  docker ps
+ 1347  ls
+ 1348  cd docker
+ 1349  ls
+ 1350  mkdir http
+ 1351  cd http
+ 1352  echo "hello" > index.html
+ 1353  sudo docker run -d -v "./:usr/share/nginx/html" nginx
+ 1354  sudo docker run -d -v "./:/usr/share/nginx/html" nginx
+ 1355  cd docker
+ 1356  docker ps
+ 1357  curl localhost:80
+ 1358  docker kill e289acbacd56
+ 1359  sudo docker run -d -v "./:/usr/share/nginx/html" -p 80:80 nginx
+ 1360  curl localhost:80
+ 1361  docker attach 8f20951780516687afdfff64017d41511f7fae7bdedec6e2cec2d17372f44d77
+ 1362  sudo docker run -d -v "./:/usr/share/nginx/html" -p 8080:80 nginx
+ 1363  curl localhost:80
+ 1364  curl localhost:8080
+ 1365  ip a
+ 1366  docker ps
+ 1367  docker kill 993d4d741894
+ 1368  sudo docker run -it --rm -v "./:/usr/share/nginx/html" -p 80:80 nginx
+ 1369  sudo docker run -it --rm -v "./:/usr/share/nginx/html" -p 443:80 nginx
+ 1370  sudo docker run -it --rm -v "./:/usr/share/nginx/html" -p 80:80 nginx
+ 1371  kubectl status
+ 1372  kubectl get nodes
+ 1373  kubectl get services
+ 1374  kubectl get deployment
+ 1375  kubectl get services -A
+ 1376  ls
+ 1377  tree
+ 1378  ls kube/
+ 1379  helm env
+ 1380  ls ~/.cache/
+ 1381  ls ~/.cache/helm/
+ 1382  ls ~/.cache/helm/repository/
+ 1383  less ~/.cache/helm/repository/prometheus-charts.txt 
+ 1384  tar vtf ~/.cache/helm/repository/prometheus-27.38.0.tgz 
+ 1385  ls /etc/
+ 1386  find /etc -name "rancher"
+ 1387  find /etc -path "*rancher*"
+ 1388  ls /var/local/
+ 1389  ls /var/run/
+ 1390  find /var -path "*rancher*"
+ 1391  ls /var/lib/rancher/k3s/server/
+ 1392  sudo ls /var/lib/rancher/k3s/server/
+ 1393  sudo ls /var/lib/rancher/k3s/
+ 1394  kubectl get pods
+ 1395  kubectl get services -A
+ 1396  kubectl get pods -A
+ 1397  cd kube
+ 1398  ls
+ 1399  kubectl get --help
+ 1400  kubectl get 
+ 1401  kubectl api-resources
+ 1402  kubectl api-resources | sort
+ 1403  kubectl get ingresses
+ 1404  kubectl get ingresses -A
+ 1405  kubectl get ingress -A
+ 1406  kubectl get pods -A --selector='app.kubernetes.io/name in (ingress-nginx,traefik,istio-ingressgateway,aws-load-balancer-controller,contour,kong)'
+ 1407  kubectl get ingressclass
+ 1408  kubectl get ingressclass -A
+ 1409  kubectl get svc
+ 1410  vim ingress-services-watylocal.yml
+ 1411  fg
+ 1412  kubectl apply -f ingress-services-watylocal.yml 
+ 1413  fg
+ 1414  vim ingress-services-watylocal.yml 
+ 1415  kubectl apply -f ingress-services-watylocal.yml 
+ 1416  kubectl get ingress
+ 1417  curl http://services.watylocal
+ 1418  curl http://services.watylocal/prometheus
+ 1419  curl http://10.0.0.29/
+ 1420  curl http://10.0.0.29/prometheus
+ 1421  kubectl get svc
+ 1422  kubectl get svc -A
+ 1423  kubectl get ingress
+ 1424  curl http://10.43.
+ 1425  kubectl logs traefik -f
+ 1426  kubectl get pods -A
+ 1427  kubectl logs --namespace kube-system traefik-c98fdf6fb-r7msw -f
+ 1428  kubectl logs --namespace kube-system svclb-traefik-53268cfd-hznpm -f
+ 1429  kubectl logs --namespace kube-system traefik-c98fdf6fb-r7msw -f
+ 1430  fg
+ 1431  kubectl apply -f ingress-services-watylocal.yml 
+ 1432  kubectl get ingress -A
+ 1433  kubectl describe ingress-services-watylocal
+ 1434  kubectl describe -h
+ 1435  kubectl describe ingress ingress-services-watylocal
+ 1436  kubectl get pods
+ 1437  kubectl get pods -o wide
+ 1438  fg
+ 1439  alias k=kubectl
+ 1440  k get ingressclass
+ 1441  fg
+ 1442  kubectl describe ingress ingress-services-watylocal
+ 1443  kubectl describe svc prom-release-prometheus-server
+ 1444  k get endpoints
+ 1445  curl 10.42.1.18:9090
+ 1446  kubectl describe ingress ingress-services-watylocal
+ 1447  kubectl describe svc prom-release-prometheus-server
+ 1448  fg
+ 1449  kubectl apply -f ingress-services-watylocal.yml 
+ 1450  kubectl describe ingress ingress-services-watylocal
+ 1451  kubectl describe svc prom-release-prometheus-server
+ 1452  fg
+ 1453  kubectl apply -f ingress-services-watylocal.yml 
+ 1454  kubectl describe ingress ingress-services-watylocal
+ 1455  cp -p ingress-services-watylocal.yml ingress-services-watylocal.yml.bak
+ 1456  fg
+ 1457  kubectl apply -f ingress-services-watylocal.yml 
+ 1458  kubectl describe ingress ingress-services-watylocal
+ 1459  fg
+ 1460  kubectl apply -f ingress-services-watylocal.yml 
+ 1461  kubectl describe ingress ingress-services-watylocal
+ 1462  fg
+ 1463  kubectl apply -f ingress-services-watylocal.yml 
+ 1464  kubectl describe ingress ingress-services-watylocal
+ 1465  fg
+ 1466  kubectl apply -f ingress-services-watylocal.yml 
+ 1467  kubectl describe ingress ingress-services-watylocal
+ 1468  k logs 
+ 1469  k get pods
+ 1470  k logs prom-release-prometheus-server-85c876b7f-vwqcz
+ 1471  k logs prom-release-prometheus-server-85c876b7f-vwqcz -f
+ 1472  k get pods -A
+ 1473  k logs traefik-c98fdf6fb-r7msw -f
+ 1474  k logs traefik-c98fdf6fb-r7msw -f --namespace kube-system
+ 1475  k get middleware -A
+ 1476  fg
+ 1477  kubectl apply -f ingress-services-watylocal.yml 
+ 1478  k logs traefik-c98fdf6fb-r7msw -f --namespace kube-system
+ 1479  k logs prom-release-prometheus-server-85c876b7f-vwqcz -f
+ 1480  k logs --help
+ 1481  k logs prom-release-prometheus-server-85c876b7f-vwqcz -f --all-pods=true
+ 1482  k logs traefik-c98fdf6fb-r7msw -f --namespace kube-system --all-pods=true
+ 1483  fg
+ 1484  kubectl apply -f ingress-services-watylocal.yml 
+ 1485  fg
+ 1486  cp -p ingress-services-watylocal.yml ingress-services-watylocal.middlew.yml
+ 1487  fg
+ 1488  kubectl apply -f ingress-services-watylocal.yml 
+ 1489  k get middleware -A
+ 1490  k delete test-stripprefix 
+ 1491  k delete middleware test-stripprefix 
+ 1492  fg
+ 1493  kubectl apply -f ingress-services-watylocal.yml 
+ 1494  history | grep prometheus
+ 1495  history | grep helm
+ 1496  history | less
+ 1497  ls kube/
+ 1498  alias k=kubectl
+ 1499  cd kube/
+ 1500  ll
+ 1501  helm show values prometheus/prometheus
+ 1502  helm show values prometheus/prometheus > values_prometheus_default.txt
+ 1503  less values_prometheus_default.txt
+ 1504  grep -v '^ ' values_prometheus_default.txt | less
+ 1505  grep -v '^ ' values_prometheus_default.txt | sort | less
+ 1506  ls
+ 1507  ll ..
+ 1508  helm -h
+ 1509  ls ~/.cache/helm/
+ 1510  ls ~/.cache/helm/repository/
+ 1511  tar vtf ~/.cache/helm/repository/prometheus-27.38.0.tgz 
+ 1512  tar vtf ~/.cache/helm/repository/prometheus-27.38.0.tgz  | less
+ 1513  helm install prometheus/prometheus --dry-run --debug 2>&1 | tee helm_install_prom.txt
+ 1514  helm install prometheus/prometheus --generate-name --dry-run --debug 2>&1 | tee helm_install_prom.txt
+ 1515  less helm_install_prom.txt 
+ 1516  grep -i url helm_install_prom.txt
+ 1517  fg
+ 1518  less helm_install_prom.txt 
+ 1519  ls
+ 1520  less values_prometheus_default.txt 
+ 1521  helm show values grafana/grafana > values_graf_default.txt
+ 1522  less values_graf_default.txt
+ 1523  helm list
+ 1524  helm list repo
+ 1525  k get ingress
+ 1526  k delete ingress ingress-services-watylocal
+ 1527  k get nodes,pods,ingress
+ 1528  k get nodes,pods,ingresses
+ 1529  k get nodes,pods,ingresses -o wide
+ 1530  k get status
+ 1531  k status
+ 1532  k
+ 1533  k cluster-info
+ 1534  k top
+ 1535  k top nodes
+ 1536  k top nodes,pods
+ 1537  k top pods
+ 1538  k get deployment
+ 1539  k get manifest prom-release-prometheus-server
+ 1540  k get manifest prom-release-prometheus
+ 1541  k get deployment -o wide
+ 1542  k get 
+ 1543  k get -h
+ 1544  k api-resources
+ 1545  k api-resources | sort
+ 1546  k api-resources | sort | grep k8s.io
+ 1547  k
+ 1548  helm
+ 1549  helm list
+ 1550  helm get
+ 1551  helm get values prom-release
+ 1552  helm get all prom-release
+ 1553  helm get all prom-release > infos_prom-release.txt
+ 1554  less infos_prom-release.txt
+ 1555  ll
+ 1556  helm
+ 1557  ll
+ 1558  for f in *.txt ; do history | grep $f ; done
+ 1559  diff helm_install_prom.txt infos_prom-release.txt |less
+ 1560  wc -l infos_prom-release.txt 
+ 1561  less values_prometheus_default.txt 
+ 1562  helm upgrade -h
+ 1563  helm get releases
+ 1564  helm get release
+ 1565  helm get all
+ 1566  helm show
+ 1567  helm show all
+ 1568  helm list
+ 1569  helm show grafana-10.0.0
+ 1570  helm show chart grafana-10.0.0 |less
+ 1571  helm list -A
+ 1572  helm show chart grafana-10.0.0
+ 1573  helm show chart grafana/grafana-10.0.0
+ 1574  helm show chart grafana/grafana
+ 1575  cd kube
+ 1576  ls
+ 1577  touch prometheus-values.yml
+ 1578  vim prometheus-values.yml
+ 1579  kubectl get svc
+ 1580  kubectl get svc -A
+ 1581  kubectl get ingress -A
+ 1582  ls
+ 1583  less ingress-services-watylocal.yml
+ 1584  fg
+ 1585  helm get all prometheus
+ 1586  helm get all prom-release
+ 1587  helm get all prom-release | less
+ 1588  helm get a prom-release | less
+ 1589  helm get manifest prom-release
+ 1590  helm get manifest prom-release | less
+ 1591  k get deployment prom-release-prometheus-server
+ 1592  alias k=kubectl
+ 1593  k get deployment prom-release-prometheus-server
+ 1594  k get deployment prom-release-prometheus-server -o yaml |less
+ 1595  k get deployment prom-release-prometheus-server -o yaml | grep -- '--web.'
+ 1596  helm list
+ 1597  ls
+ 1598  k get deployment prom-release-prometheus-server -o yaml | grep -- '--web.'
+ 1599  alias k=kubectl
+ 1600  echo 'alias k=kubectl' >> ~/.bashrc
+ 1601  k get deployment prom-release-prometheus-server -o yaml | grep -- '--web.'
+ 1602  cd kube
+ 1603  grep ingress *
+ 1604  less values_prometheus_default.txt 
+ 1605  cd kube
+ 1606  ls
+ 1607  k get deployment prom-release-prometheus-server -o yaml | grep -- '--web.'
+ 1608  cat prometheus-values.yml 
+ 1609  vim prometheus-values.yml 
+ 1610  helm upgrade --values prometheus-values.yml prometheus/prometheus 
+ 1611  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus  --dry-run
+ 1612  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus
+ 1613  k get deployment prom-release-prometheus-server -o yaml | grep -- '--web.'
+ 1614  k get deployment prom-release-prometheus-server -o yaml | less
+ 1615  helm upgrade --debug --values prometheus-values.yml prom-release prometheus/prometheus  --dry-run | tee debug-upgrade.txt
+ 1616  less debug-upgrade.txt
+ 1617  grep watylocal debug-upgrade.txt
+ 1618  less debug-upgrade.txt
+ 1619  helm list
+ 1620  k get nodes
+ 1621  k get ingress
+ 1622  k get ingress -A
+ 1623  k get svc -A
+ 1624  helm upgrade --reset-values  prom-release prometheus/prometheus 
+ 1625  helm repo list
+ 1626  less prometheus-values.yml 
+ 1627  k get ingress-controller
+ 1628  k get ingressController
+ 1629  k api-resources
+ 1630  k api-resources | grep ingre
+ 1631  k api-resources | grep control
+ 1632  k get ingressClasses
+ 1633  k get ingressClasses -o wide
+ 1634  k get ingressClasses,ingress -o wide
+ 1635  k get ingressClasses -o wide
+ 1636  k get ingresses -o wide
+ 1637  less prometheus-values.yml 
+ 1638  ls
+ 1639  less values_prometheus_default.txt 
+ 1640  grep 'server:' values_prometheus_default.txt
+ 1641  less values_prometheus_default.txt
+ 1642  vim prometheus-values.yml 
+ 1643  diff prometheus-values.yml .prometheus-values.yml.swp 
+ 1644  fg
+ 1645  helm upgrade --debug --values prometheus-values.yml prom-release prometheus/prometheus  --dry-run | tee debug-upgrade.txt
+ 1646  grep ingress debug-upgrade.txt
+ 1647  less debug-upgrade.txt
+ 1648  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus
+ 1649  k get ingressClasses,ingress -o wide
+ 1650  k get ingress prom-release-prometheus-server  -o yaml
+ 1651  k get svc
+ 1652  k get svc -o wide
+ 1653  k top
+ 1654  k top svc
+ 1655  k top services
+ 1656  k top nodes
+ 1657  k top pods
+ 1658  k top pods -o wide
+ 1659  k status
+ 1660  k get all
+ 1661  k logs pod/prom-release-prometheus-server-57f7f69597-pmcwr
+ 1662  k get deployment prom-release-prometheus-server -o yaml | grep -- '--web.'
+ 1663  sudo apt install yq
+ 1664  man yq
+ 1665  info yq
+ 1666  yq prometheus-values.yml 
+ 1667  yq "" prometheus-values.yml 
+ 1668  yq ".." prometheus-values.yml 
+ 1669  yq ".. |  path | join(".") " prometheus-values.yml 
+ 1670  yq '.. |  path | join(".")' prometheus-values.yml 
+ 1671  yq eval '.. |  path | join(".")' prometheus-values.yml 
+ 1672  yq eval '.. | select(tag != "!!map" and tag != "!!seq") | path | join(".") + " = " + .' prometheus-values.yml
+ 1673  yq "" prometheus-values.yml 
+ 1674  yq "." prometheus-values.yml 
+ 1675  yq ".server.ingress" prometheus-values.yml 
+ 1676  yq ".server.ingress.enabled" prometheus-values.yml 
+ 1677  yq ".server.ingress.extraPaths" prometheus-values.yml 
+ 1678  nqp
+ 1679  fg
+ 1680  yq ".server.ingress.extraPaths" prometheus-values.yml 
+ 1681  yq ".server.ingress.enabled" prometheus-values.yml 
+ 1682  fg
+ 1683  yq ".server.ingress.enabled" prometheus-values.yml 
+ 1684  fg
+ 1685  k get all
+ 1686  ll
+ 1687  less values_prometheus_default.txt 
+ 1688  grep -R reload
+ 1689  grep -R 'reload-url'
+ 1690  grep -R 'reload-url' -C3
+ 1691  history | grep helm_install_prom.txt
+ 1692  ll
+ 1693  less values_prometheus_default.txt 
+ 1694  cd ~/.cache/helm/repository/
+ 1695  ls
+ 1696  mkdir /tmp/prom
+ 1697  tar xvzf prometheus-27.38.0.tgz -C /tmp/prom
+ 1698  cd /tmp/prom
+ 1699  ll
+ 1700  cd prometheus/
+ 1701  ll
+ 1702  grep -R 'reload-url' -C3
+ 1703  less charts/alertmanager/templates/statefulset.yaml
+ 1704  cd ~/kube
+ 1705  k get values
+ 1706  k get values -h
+ 1707  history | grep ' values '
+ 1708  helm show values prometheus/prometheus | tee values_prom_custom1.txt
+ 1709  less values_prom_custom1.txt
+ 1710  k get manifest -h
+ 1711  helm
+ 1712  helm get -h
+ 1713  helm get all prometheus
+ 1714  helm list
+ 1715  helm get all prom-release |less
+ 1716  less /tmp/prom/prometheus/templates/deploy.yaml 
+ 1717  fg %1
+ 1718  fg %2
+ 1719  grep reload values_prometheus_default.txt 
+ 1720  fg %2
+ 1721  k get pod
+ 1722  k describe prom-release-prometheus-server-57f7f69597-pmcwr
+ 1723  k describe pod prom-release-prometheus-server-57f7f69597-pmcwr
+ 1724  k get svc
+ 1725  k describe svc prom-release-prometheus-server
+ 1726  k get all
+ 1727  k get pod
+ 1728  k describe pod prom-release-prometheus-server-57f7f69597-pmcwr
+ 1729  k get manifest prom-release | grep kind:
+ 1730  helm get manifest prom-release | grep kind:
+ 1731  helm get manifest prom-release | less
+ 1732  fg %2
+ 1733  fg %1
+ 1734  vim prometheus-values.yml 
+ 1735  history | grep prometheus-values.yml
+ 1736  grep "80\|9090" debug-upgrade.txt 
+ 1737  helm upgrade --debug --values prometheus-values.yml prom-release prometheus/prometheus  --dry-run  | grep "80\|9090" debug-upgrade.txt
+ 1738  helm upgrade --debug --values prometheus-values.yml prom-release prometheus/prometheus  --dry-run  | grep "80\|9090"
+ 1739  k get all
+ 1740  k get all -A
+ 1741  k get all,ingress -A
+ 1742  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus 
+ 1743  k get all,ingress -A
+ 1744  k get pod
+ 1745  less prometheus-values.yml 
+ 1746  k get pod
+ 1747  k logs prom-release-prometheus-server-57f7f69597-pmcwr
+ 1748  k get pod
+ 1749  k logs prom-release-prometheus-server-57f7f69597-pmcwr
+ 1750  k get pod
+ 1751  nmap -V
+ 1752  nmap
+ 1753  nmap -v -sV -O 10.0.0.38
+ 1754  sudo nmap -v -sV -O 10.0.0.38
+ 1755  ll
+ 1756  rm ingress-services-watylocal.middlew.yml ingress-services-watylocal.yml.bak 
+ 1757  less ingress-services-watylocal.yml 
+ 1758  k get ingressclass
+ 1759  cat ingress-services-watylocal.yml 
+ 1760  k get svc
+ 1761  k apply -h
+ 1762  k apply -f ingress-services-watylocal.yml 
+ 1763  k get ingress -A
+ 1764  k delete ingress ingress-services-watylocal
+ 1765  k get services -A
+ 1766  k get ingressclass
+ 1767  k get ingressclass -A
+ 1768  k get ingresscontroller
+ 1769  ll
+ 1770  cp ingress-services-watylocal.yml httpd-service.yml
+ 1771  vim httpd-service.yml
+ 1772  k api-resources | grep namespace
+ 1773  fg
+ 1774  k apply -y httpd-service.yml 
+ 1775  k apply -f httpd-service.yml 
+ 1776  fg
+ 1777  k apply -f httpd-service.yml 
+ 1778  fg
+ 1779  k apply -f httpd-service.yml 
+ 1780  k get all -n httpd-nm
+ 1781  k get ingress
+ 1782  fg
+ 1783  k apply -f httpd-service.yml 
+ 1784  fg
+ 1785  curl services.watylocal:80
+ 1786  curl http://services.watylocal
+ 1787  curl http://10.0.0.38
+ 1788  curl http://10.0.0.29
+ 1789  curl http://10.43.96.222
+ 1790  fg
+ 1791  k get pods -o wide
+ 1792  k get pods -o wide -A
+ 1793  k describe pod httpd-deployment-1-545985dd57-cvg2v -n httpd-nm
+ 1794  fg
+ 1795  k apply -f httpd-service.yml 
+ 1796  k get all -n httpd-nm
+ 1797  curl http://10.43.96.222:30101
+ 1798  fg
+ 1799  k apply -f httpd-service.yml 
+ 1800  fg
+ 1801  curl 10.0.0.38:8080
+ 1802  curl http://10.0.0.38:8080
+ 1803  k get all
+ 1804  k get all -n httpd-nm
+ 1805  ping node-00.watylocal
+ 1806  nmap 10.0.0.38:8080
+ 1807  nmap -p 8080 10.0.0.38
+ 1808  curl http://10.0.0.38:8080
+ 1809  fg
+ 1810  k get all -n httpd-nm
+ 1811  fg
+ 1812  curl http://10.0.0.38:80
+ 1813  k describe ingress
+ 1814  k get services
+ 1815  k get services -A
+ 1816  k get services -n httpd-km
+ 1817  k get services -n httpd-nm
+ 1818  k get all -n httpd-nm
+ 1819  k describe ingress
+ 1820  k get ingress ingress-httpd-1 
+ 1821  k get ingress ingress-httpd-1 -o wide
+ 1822  k get
+ 1823  k get -h
+ 1824  k get ingress ingress-httpd-1 -o wide -A
+ 1825  k get ingress -A -o wide
+ 1826  k get services -n httpd-nm
+ 1827  k get services -A
+ 1828  vim httpd-service.yml 
+ 1829  fg
+ 1830  k apply -f httpd-service.yml 
+ 1831  k get ingress -A
+ 1832  k delete ingress ingress-httpd-1 -n default
+ 1833  k get ingress -A
+ 1834  k delete ingress ingress-httpd-1 -n httpd-nm
+ 1835  k get ingress -A
+ 1836  k apply -f httpd-service.yml 
+ 1837  k get ingress -A
+ 1838  fg
+ 1839  vim httpd-service.yml 
+ 1840  k apply -f httpd-service.yml 
+ 1841  fg
+ 1842  k apply -f httpd-service.yml 
+ 1843  k get pods
+ 1844  k get pods -n http-nm
+ 1845  k get pod -n http-nm
+ 1846  k get pod -n httpd-nm
+ 1847  k logs httpd-deployment-1-545985dd57-cvg2v
+ 1848  k logs httpd-deployment-1-545985dd57-cvg2v -n httpd-nm
+ 1849  k logs httpd-deployment-1-545985dd57-rt9lh -n httpd-nm
+ 1850  fg
+ 1851  k apply -f httpd-service.yml 
+ 1852  fg
+ 1853  k apply -f httpd-service.yml 
+ 1854  fg
+ 1855  k apply -f httpd-service.yml 
+ 1856  fg
+ 1857  k describe ingress -A
+ 1858  fg
+ 1859  k apply -f httpd-service.yml 
+ 1860  k describe ingress -A
+ 1861  fg
+ 1862  k apply -f httpd-service.yml 
+ 1863  k describe ingress -A
+ 1864  fg
+ 1865  k apply -f httpd-service.yml 
+ 1866  k describe ingress -A
+ 1867  fg
+ 1868  k apply -f httpd-service.yml 
+ 1869  k describe ingress -A
+ 1870  fg
+ 1871  k apply -f httpd-service.yml 
+ 1872  k describe ingress -A
+ 1873  fg
+ 1874  k delete ingress ingress-httpd-1
+ 1875  k delete ingress ingress-httpd-1 -n httpd-nm
+ 1876  cp httpd-service.yml httpd-traefik-service.yml 
+ 1877  vim httpd-traefik-service.yml
+ 1878  k apply -f httpd-traefik-service.yml
+ 1879  fg
+ 1880  k apply -f httpd-traefik-service.yml
+ 1881  fg
+ 1882  k apply -f httpd-traefik-service.yml
+ 1883  k get ingress -A
+ 1884  k get ingressRoutes -A
+ 1885  k describe ingressRoutes -A
+ 1886  fg
+ 1887  k apply -f httpd-traefik-service.yml
+ 1888  k describe ingressRoutes -A
+ 1889  tail -n20 httpd-traefik-service.yml 
+ 1890  tail -n25 httpd-traefik-service.yml 
+ 1891  tail -n28 httpd-traefik-service.yml 
+ 1892  tail -n40 httpd-traefik-service.yml 
+ 1893  tail -n40 httpd-traefik-service.yml  > ingress_prom_graf.yml
+ 1894  vim ingress_prom_graf.yml
+ 1895  k get namespace
+ 1896  k get svc
+ 1897  k get all
+ 1898  k get all -A
+ 1899  fg
+ 1900  k apply -f ingress_prom_graf.yml 
+ 1901  ll
+ 1902  less prometheus-values.yml
+ 1903  jobs
+ 1904  fg %3
+ 1905  vim prometheus-values.yml 
+ 1906  helm update --values prometheus-values.yml prom-release prometheus/prometheus
+ 1907  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus
+ 1908  helm get manifest prom-release | less
+ 1909  k get pods
+ 1910  helm get manifest prom-release | less
+ 1911  ls
+ 1912  less values_prometheus_default.txt 
+ 1913  vim prometheus-values.yml 
+ 1914  fg
+ 1915  helm get manifest prom-release | grep "reloadUrl\|reload-url"
+ 1916  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus --dry-run | grep "reloadUrl\|reload-url"
+ 1917  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus
+ 1918  k get pods
+ 1919  k logs pod prom-release-prometheus-server-7476f549b6-hg6bv
+ 1920  k logs prom-release-prometheus-server-7476f549b6-hg6bv
+ 1921  k get pods
+ 1922  k logs prom-release-prometheus-server-7476f549b6-hg6bv
+ 1923  k get ingress -A
+ 1924  k get ingressRoute -A
+ 1925  k describe ingress-prom-graf
+ 1926  k describe ingressRoute ingress-prom-graf
+ 1927  k describe ingressRoute ingress-prom-graf -n kube-system
+ 1928  ll
+ 1929  fg
+ 1930  history | grep ingress_prom
+ 1931  fg
+ 1932  k delete ingress-prom-graf -n httpd-nm
+ 1933  k delete ingressRoute ingress-prom-graf -n httpd-nm
+ 1934  k get ingressRoute -A
+ 1935  k describe ingressRoute ingress-prom-graf -n kube-system
+ 1936  k describe ingressRoute ingress-prom-graf
+ 1937  k get all -n default
+ 1938  k get all -n default ; k get ingressRoute
+ 1939  k get all -n default ; k get ingressRoute -o wide
+ 1940  k get all -n default ; k get ingressRoute -o yaml
+ 1941  helm get manifest prom-release | less
+ 1942  k describe ingressRoute
+ 1943  k describe ingressRoute ingress-prom-graf
+ 1944  fg
+ 1945  k apply -f ingress_prom_graf.yml 
+ 1946  k describe ingressRoute ingress-prom-graf
+ 1947  fg
+ 1948  k apply -f ingress_prom_graf.yml 
+ 1949  fg
+ 1950  k apply -f ingress_prom_graf.yml 
+ 1951  fg %5
+ 1952  fg %4
+ 1953  fg %3
+ 1954  fg %2
+ 1955  jobs
+ 1956  vim prometheus-values.yml 
+ 1957  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus
+ 1958  k get pods
+ 1959  k logs prom-release-prometheus-server-6599945d7f-zmck2
+ 1960  k logs prom-release-prometheus-server-6599945d7f-zmck2 -f
+ 1961  k get pods
+ 1962  k logs prom-release-prometheus-server-6599945d7f-zmck2 -f
+ 1963  k describe pod prom-release-prometheus-server-6599945d7f-zmck2
+ 1964  helm get manifest prom-release | less
+ 1965  ll
+ 1966  less values_prometheus_default.txt
+ 1967  cd /tmp/prom/prometheus/
+ 1968  grep -R '.server.'
+ 1969  grep -R '\.server\.'
+ 1970  grep -R '\.server\.' | grep live
+ 1971  less templates/deploy.yaml 
+ 1972  cd -
+ 1973  less values_prometheus_default.txt
+ 1974  helm get manifest prom-release | less
+ 1975  less /tmp/prom/prometheus/templates/deploy.yaml 
+ 1976  grep tcpSocketProbeEnabled  values_prometheus_default.txt
+ 1977  jobs
+ 1978  fg %7
+ 1979  grep tcpSocketProbeEnabled  values_prometheus_default.txt
+ 1980  less values_prometheus_default.txt
+ 1981  fg %10
+ 1982  fg
+ 1983  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus
+ 1984  k get pods
+ 1985  k describe prom-release-prometheus-server-5f74fcd9bf-j8l79
+ 1986  k describe pod prom-release-prometheus-server-5f74fcd9bf-j8l79
+ 1987  helm get manifest prom-release | less
+ 1988  k get middleware
+ 1989  k get middleware -A
+ 1990  k get middleware stripprefix
+ 1991  k get middleware stripprefix -A
+ 1992  k get middleware stripprefix -n kube-system
+ 1993  ls
+ 1994  less ingress_prom_graf.yml
+ 1995  vim ingress_prom_graf.yml
+ 1996  fg
+ 1997  k apply -f ingress_prom_graf.yml 
+ 1998  less prometheus-values.yml 
+ 1999  less ingress_prom_graf.yml 
+ 2000  vim ingress_prom_graf.yml 
+ 2001  fg
+ 2002  fg %5
+ 2003  vim prometheus-values.yml 
+ 2004  k apply -f ingress_prom_graf.yml 
+ 2005  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus
+ 2006  k get pods
+ 2007  k describe prom-release-prometheus-server-85667647bd-4bl57
+ 2008  k describe pod prom-release-prometheus-server-85667647bd-4bl57
+ 2009  fg
+ 2010  k describe prom-release-prometheus-server-85667647bd-4bl57
+ 2011  helm upgrade --values prometheus-values.yml prom-release prometheus/prometheus
+ 2012  k get pods
+ 2013  k describe pod prom-release-prometheus-server-c64b95549-26hzv
+ 2014  fg
+ 2015  cp prometheus-values.yml  toto
+ 2016  vim toto 
+ 2017  less toto 
+ 2018  less ingress_prom_graf.yml 
+ 2019  vim ingress_prom_graf.yml
+ 2020  fg
+ 2021  vim ingress_prom_graf.yml 
+ 2022  less ingress_prom_graf.yml
+ 2023  grep -Ri probe
+ 2024  ll
+ 2025  less values_graf_default.txt 
+ 2026  k get all
+ 2027  fg
+ 2028  ls
+ 2029  vim ingress_prom_graf.yml 
+ 2030  k get svc
+ 2031  fg
+ 2032  k apply -f ingress_prom_graf.yml 
+ 2033  k get ingressroute
+ 2034  k describe ingressroute ingress-prom-graf
+ 2035  less values_graf_default.txt 
+ 2036  helm get notes graf-release-grafana
+ 2037  helm get notes graf-release-grafana -n default
+ 2038  helm get notes -h
+ 2039  helm list
+ 2040  helm get notes graf-release
+ 2041  grep persistence values_graf_default.txt 
+ 2042  grep -A5 persistence values_graf_default.txt 
+ 2043  grep -A5 env: values_graf_default.txt 
+ 2044  grep -A5 GF_ values_graf_default.txt 
+ 2045  helm get manifest
+ 2046  helm get manifest graf-release |less
+ 2047  mkdir /tmp/graf
+ 2048  tar xvzf ~/.cache/helm/repository/grafana-10.0.0.tgz -C /tmp/graf/
+ 2049  less /tmp/graf/grafana/templates/deployment.yaml 
+ 2050  helm get manifest graf-release |less
+ 2051  fg %2
+ 2052  less /tmp/graf/grafana/templates/_pod.tpl 
+ 2053  fg %3
+ 2054  fg %4
+ 2055  fg %3
+ 2056  fg %4
+ 2057  ll
+ 2058  vim grafana-values.yml
+ 2059  fg
+ 2060  less prometheus-values.yml 
+ 2061  gh
+ 2062  fg
+ 2063  helm get manifest graf-release | less
+ 2064  helm get manifest graf-release | grep POD_IP
+ 2065  helm get manifest graf-release | grep -A20 POD_IP
+ 2066  helm get manifest graf-release | grep -A30 POD_IP
+ 2067  helm upgrade --values grafana-values.yml graf-release grafana/grafana --dry-run | grep grep -A30 POD_IP
+ 2068  helm upgrade --values grafana-values.yml graf-release grafana/grafana --dry-run | grep -A30 POD_IP
+ 2069  helm upgrade --reset-values graf-release grafana/grafana --dry-run | grep -A30 POD_IP
+ 2070  fg %4
+ 2071  fg
+ 2072  vim grafana-values.yml 
+ 2073  jobs
+ 2074  fg %5
+ 2075  fg
+ 2076  helm upgrade --values grafana-values.yml graf-release grafana/grafana --dry-run | grep -A30 POD_IP
+ 2077  helm upgrade --values grafana-values.yml graf-release grafana/grafana --dry-run | grep ini
+ 2078  helm show values grafana/grafana | less
+ 2079  helm show values grafana/grafana | yq eval 'paths | join(".") + " = " + getpath(.)' - | less
+ 2080  helm show values grafana/grafana | | yq eval 'paths(scalars) | join(".") + " = " + getpath(.)' - | head
+ 2081  helm show values grafana/grafana | yq eval 'paths(scalars) | join(".") + " = " + getpath(.)' - | head
+ 2082  helm show values grafana/grafana |  yq eval '. as $in ireduce ({}; . * { (paths | join(".")): getpath(.) })' -   | yq eval 'to_entries | .[] | "\(.key) = \(.value)"' -
+ 2083  yq --version
+ 2084  sudo apt show yq
+ 2085  wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY} -O /usr/local/bin/yq &&    chmod +x /usr/local/bin/yq
+ 2086  sudo wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY} -O /usr/local/bin/yq &&    chmod +x /usr/local/bin/yq
+ 2087  sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq &&    chmod +x /usr/local/bin/yq
+ 2088  sudo  chmod +x /usr/local/bin/yq
+ 2089  which yq
+ 2090  yq --version
+ 2091  /usr/local/bin/yq 
+ 2092  /usr/local/bin/yq --version
+ 2093  whereis yq
+ 2094  echo $PATH
+ 2095  helm show values grafana/grafana | /usr/local/bin/yq eval 'paths(scalars) | join(".") + " = " + getpath(.)' - | head
+ 2096  helm show values grafana/grafana |  /usr/local/bin/yq eval '. as $in ireduce ({}; . * { (paths | join(".")): getpath(.) })' -   | /usr/local/bin/yq eval 'to_entries | .[] | "\(.key) = \(.value)"' -
+ 2097  alias yq=/usr/local/bin/yq
+ 2098  helm show values grafana/grafana | yq eval 'paths | join(".") + " = " + getpath(.)' - | less
+ 2099  helm show values grafana/grafana | yq eval 'paths | join(".") + " = " + getpath(.)' - 
+ 2100  yq --version
+ 2101  helm show values grafana/grafana | yq eval 'paths(scalars) | join(".") + " = " + getpath(.)' -
+ 2102  helm show values grafana/grafana | yq e 'paths(scalars) as $p | "\($p | join(".")) = \(getpath($p))"' -
+ 2103  yq '.' values_graf_default.txt 
+ 2104  yq '..' values_graf_default.txt 
+ 2105  yq -h
+ 2106  yq '.. style= "flow"' values_graf_default.txt 
+ 2107  yq '.grafana["grafana.ini"]' values_graf_default.txt 
+ 2108  yq '.grafana' values_graf_default.txt 
+ 2109  yq '.' values_graf_default.txt  | head
+ 2110  yq '.global' values_graf_default.txt  | head
+ 2111  yq '.global.grafana' values_graf_default.txt  | head
+ 2112  yq '.global[]' values_graf_default.txt  | head
+ 2113  grep .ini values_graf_default.txt |head
+ 2114  grep .ini values_graf_default.txt
+ 2115  fg
+ 2116  helm upgrade --values grafana-values.yml graf-release grafana/grafana --dry-run | grep ini
+ 2117  helm upgrade --values grafana-values.yml graf-release grafana/grafana
+ 2118  cat grafana-values.yml 
+ 2119  fg
+ 2120  gh
+ 2121  fg
+ 2122  vim grafana-values.yml 
+ 2123  helm upgrade --values grafana-values.yml graf-release grafana/grafana
+ 2124  k get pods
+ 2125  k describe pod graf-release-grafana-57b9bb6f98-rp9wh
+ 2126  helm get notes graf-release
+ 2127  helm list repo
+ 2128  helm repo -h
+ 2129  helm repo list
+ 2130  helm -h
+ 2131  helm show -h
+ 2132  helm show chart prometheus/prometheus
+ 2133  helm show readme prometheus/prometheus
+ 2134  helm repo list
+ 2135  helm show chart prometheus/prometheus
+ 2136  helm show chart prometheus/prometheus | tail -n2
+ 2137  helm show chart grafana/grafana | tail -n2
+ 2138  l
+ 2139  ll
+ 2140  cat ingress_prom_graf.yml 
+ 2141  k apply -h
+ 2142  ls
+ 2143  tar cvzf prom-graf-install.tgz prometheus-values.yml grafana-values.yml ingress_prom_graf.yml 
+ 2144  tar vtf prom-graf-install.tgz 
+ 2145  history | head
+ 2146  history | less
+ 2147  history > commands
